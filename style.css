@@ -12,3 +12,22 @@
   --primary--color: hsl(var(--hue), 100%, 63%);
   --controls-bg--color: hsl(var(--hue), 0%, 14%);
 }
+
+body {
+  background-color: var(--bg--color);
+  color: var(--text--color);
+
+  display: grid;
+  place-content: center;
+  height: 100vh;
+}
+
+#app {
+    display: grid;
+    justify-items: center;
+}
+
+/* Classe utilitária: tem um único propósito*/
+.flex {
+    display: flex;
+}
