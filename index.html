@@ -32,22 +32,24 @@
     </section>
 
     <section id="controls" class="flex">
-      <button class="ph ph-play-circle">
+      <button data-action="toggleRunning" class="ph ph-play-circle">
+        <!--Dataset: Atributo HTML flexível quer permite definir propriedades (após o - traçinho). -->
         <span class="sr-only">Start counter</span>
       </button>
-      <button class="ph ph-pause-circle">
+      <button data-action="toggleRunning" class="ph ph-pause-circle">
+        <!-- msm atributo do anterior, pois é um toggle q só muda o estado-->
         <span class="sr-only">Pause counter</span>
       </button>
-      <button class="ph ph-timer secondary">
+      <button data-action="set" class="ph ph-timer secondary">
         <span class="sr-only">Adjust counter</span>
       </button>
-      <button class="ph ph-stop-circle secondary">
-        <span class="sr-only">Stop counter</span>
+      <button data-action="reset" class="ph ph-stop-circle secondary">
+        <span class="sr-only">Reset counter</span>
       </button>
-      <button class="ph ph-speaker-none secondary">
+      <button data-action="toggleMusic" class="ph ph-speaker-none secondary">
         <span class="sr-only">Start music</span>
       </button>
-      <button class="ph ph-speaker-high">
+      <button data-action="toggleMusic" class="ph ph-speaker-high">
         <span class="sr-only">Stop music</span>
       </button>
     </section>
