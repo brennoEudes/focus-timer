@@ -11,6 +11,8 @@
   --text--color: hsl(var(--hue), 40%, 98%);
   --primary--color: hsl(var(--hue), 100%, 63%);
   --controls-bg--color: hsl(var(--hue), 0%, 14%);
+
+  font-size: clamp(40%, 1% + 2vw, 62.5%); /* Flexibiliza e define um range para o dimensionameto do elemento. Vai sempre fazer o cálculo do meio, tendo como mín 40% e máx 62.5%.*/
 }
 
 body {
@@ -23,11 +25,40 @@ body {
 }
 
 #app {
-    display: grid;
-    justify-items: center;
+  display: grid;
+  justify-items: center;
 }
 
 /* Classe utilitária: tem um único propósito*/
 .flex {
-    display: flex;
+  display: flex;
+}
+
+#timer {
+  font-size: 9.6rem;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+#controls {
+    margin-top: 1.6rem;
+    padding: 2.2rem 4rem;
+    gap: 1.6rem;
+
+    background-color: var(--controls-bg--color);
+    border-radius: 999rem;
+}
+
+button {
+    background-color: transparent;
+    border: 0;
+
+    color: var(--primary--color);
+    font-size: 6.4rem;
+
+    cursor: pointer;
+}
+
+.secondary {
+    color: var(--text--color);
 }
