@@ -12,7 +12,11 @@
   --primary--color: hsl(var(--hue), 100%, 63%);
   --controls-bg--color: hsl(var(--hue), 0%, 14%);
 
-  font-size: clamp(40%, 1% + 2vw, 62.5%); /* Flexibiliza e define um range para o dimensionameto do elemento. Vai sempre fazer o cálculo do meio, tendo como mín 40% e máx 62.5%.*/
+  font-size: clamp(
+    40%,
+    1% + 2vw,
+    62.5%
+  ); /* Flexibiliza e define um range para o dimensionameto do elemento. Vai sempre fazer o cálculo do meio, tendo como mín 40% e máx 62.5%.*/
 }
 
 body {
@@ -41,24 +45,35 @@ body {
 }
 
 #controls {
-    margin-top: 1.6rem;
-    padding: 2.2rem 4rem;
-    gap: 1.6rem;
+  margin-top: 1.6rem;
+  padding: 2.2rem 4rem;
+  gap: 1.6rem;
 
-    background-color: var(--controls-bg--color);
-    border-radius: 999rem;
+  background-color: var(--controls-bg--color);
+  border-radius: 999rem;
 }
 
 button {
-    background-color: transparent;
-    border: 0;
+  background-color: transparent;
+  border: 0;
 
-    color: var(--primary--color);
-    font-size: 6.4rem;
+  color: var(--primary--color);
+  font-size: 6.4rem;
 
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .secondary {
-    color: var(--text--color);
+  color: var(--text--color);
+}
+
+/* CONTROLS */
+.running .ph-play-circle,
+.running .ph-timer,
+.musicon .ph-speaker-none,
+/* pseudo class (html:not = o html não possui... */
+html:not(.running) .ph-pause-circle,
+html:not(.running) .ph-stop-circle,
+html:not(.musicon) .ph-speaker-high {
+  display: none;
 }
