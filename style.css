@@ -105,10 +105,10 @@ button {
 /* CONTROLS */
 .running .ph-play-circle,
 .running .ph-timer,
-.musicon .ph-speaker-none,
+.music-on .ph-speaker-none,
 /* pseudo class (html:not = o html não possui... */
 html:not(.running) .ph-pause-circle,
 html:not(.running) .ph-stop-circle,
-html:not(.musicon) .ph-speaker-high {
+html:not(.music-on) .ph-speaker-high {
   display: none;
 }
