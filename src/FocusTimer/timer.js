@@ -1,15 +1,32 @@
 import state from "./state.js";
 import * as el from "./elements.js";
+import { reset } from "./actions.js";
 
 export function countdown() {
   if (!state.isRunning) {
-    return
+    return;
   }
 
-  console.log("Iniciou!")
+  let minutes = Number(el.minutes.textContent);
+  let seconds = Number(el.seconds.textContent);
+
+  // tira 1s imediatamente:
+  seconds--;
+
+  if (seconds < 0) {
+    seconds = 59;
+    minutes--;
+  }
+
+  if (minutes < 0) {
+    reset();
+    return;
+  }
+
+  updateDisplay(minutes, seconds);
 
   // setTimeout: método que executa uma fcn depois de um tempo (ms):
-  setTimeout(() => countdown(), 1000) // RECURSÃO: quando uma fcn chama ela msm! Precisa ser parada em algum mommento para não dar problema no código!
+  setTimeout(() => countdown(), 1000); // RECURSÃO: quando uma fcn chama ela msm! Precisa ser parada em algum mommento para não dar problema no código!
 }
 
 // Atualizando valores do contador:
