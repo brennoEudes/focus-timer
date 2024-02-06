@@ -4,6 +4,8 @@ import { reset } from "./actions.js";
 import { kitchenTimer } from "./sounds.js";
 
 export function countdown() {
+  clearTimeout(state.countdownId); // limpa o state do countdownId p/ evitar o acúmulo do setTimeOut.
+
   if (!state.isRunning) {
     return;
   }
@@ -28,7 +30,7 @@ export function countdown() {
   updateDisplay(minutes, seconds);
 
   // setTimeout: método que executa uma fcn depois de um tempo (ms):
-  setTimeout(() => countdown(), 1000); // RECURSÃO: quando uma fcn chama ela msm! Precisa ser parada em algum mommento para não dar problema no código!
+  state.countdownId = setTimeout(() => countdown(), 1000); // RECURSÃO: quando uma fcn chama ela msm! Precisa ser parada em algum mommento para não dar problema no código!
 }
 
 // Atualizando valores do contador:
