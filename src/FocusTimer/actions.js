@@ -1,6 +1,7 @@
 import state from "./state.js";
 import * as timer from "./timer.js";
 import * as el from "./elements.js";
+import * as sounds from "./sounds.js";
 
 export function toggleRunning() {
   // console.log("ToggleRunning function!"); // p/ testar se está funcionando
@@ -9,6 +10,7 @@ export function toggleRunning() {
   state.isRunning = document.documentElement.classList.toggle("running");
 
   timer.countdown();
+  sounds.buttonPressAudio.play(); // add som!
 }
 
 export function reset() {
@@ -17,14 +19,22 @@ export function reset() {
 
   // atualiza o display p/ não deixar em 0:
   timer.updateDisplay();
+  sounds.buttonPressAudio.play();
 }
 
 export function set() {
   el.minutes.setAttribute("contenteditable", true);
-  el.minutes.focus()
+  el.minutes.focus();
 }
 
 export function toggleMusic() {
   // console.log("toggleMusic function!");
   state.isMute = document.documentElement.classList.toggle("music-on");
+
+  if (state.isMute) {
+    sounds.bgAudio.play();
+    return;
+  }
+
+  sounds.bgAudio.pause();
 }
