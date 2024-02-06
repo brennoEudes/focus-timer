@@ -1,5 +1,6 @@
 import state from "./state.js";
 import * as timer from "./timer.js";
+import * as el from "./elements.js";
 
 export function toggleRunning() {
   // console.log("ToggleRunning function!"); // p/ testar se está funcionando
@@ -19,7 +20,8 @@ export function reset() {
 }
 
 export function set() {
-  console.log("set");
+  el.minutes.setAttribute("contenteditable", true);
+  el.minutes.focus()
 }
 
 export function toggleMusic() {
