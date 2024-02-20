@@ -4,7 +4,7 @@ import * as el from "./elements.js";
 import * as sounds from "./sounds.js";
 
 export function toggleRunning() {
-  // console.log("ToggleRunning function!"); // p/ testar se está funcionando
+  //console.log("ToggleRunning function!"); // p/ testar se está funcionando
 
   // altera o estado de running retornando true ou false:
   state.isRunning = document.documentElement.classList.toggle("running");
@@ -14,6 +14,7 @@ export function toggleRunning() {
 }
 
 export function reset() {
+  // console.log("Reset function!");
   state.isRunning = false;
   document.documentElement.classList.remove("running");
 
