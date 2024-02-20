@@ -77,6 +77,8 @@ body {
   font-size: 9.6rem;
   font-weight: bold;
   font-family: sans-serif;
+
+  justify-content: center;
 }
 
 #controls {
