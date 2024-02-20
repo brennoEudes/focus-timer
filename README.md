@@ -1,5 +1,5 @@
 <p align="center">
-<img src="./.github/cover.png" alt="Project-demonstration" width=100%/>
+<img src="./.github/cover-2.png" alt="Project-demonstration" width=100%/>
 </p>
 
 ## What is the Pomodoro Technique?
