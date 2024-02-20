@@ -68,7 +68,7 @@ body {
 
 h1 {
   text-align: center;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-weight: 100;
   line-height: 8rem;
 }
@@ -138,13 +138,14 @@ footer {
 
   text-align: center;
   line-height: 8rem;
-  font-size: 1.2rem;
 }
 
 footer a {
   text-decoration: none;
   transition: 0.2s;
+
   color: #fff;
+  font-size: 1.2rem;
 }
 
 footer a strong {
