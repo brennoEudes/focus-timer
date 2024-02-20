@@ -10,10 +10,9 @@
   --bg--color: hsl(var(--hue), 5%, 7%);
   --text--color: hsl(var(--hue), 40%, 98%);
   --primary--color: hsl(var(--hue), 100%, 63%);
+  --second--color: hsl(0, 78%, 51%);
   --controls-bg--color: hsl(var(--hue), 0%, 14%);
   --button--secondary: hsl(var(--hue), 40%, 98%);
-
-  --surface-color: hsla(0, 0%, 100%, 0.1);
   --highlight-color: hsla(0, 0%, 100%, 0.2);
 
   font-family: "Inter", sans-serif;
@@ -67,6 +66,13 @@ body {
   height: 100vh;
 }
 
+h1 {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 100;
+  line-height: 8rem;
+}
+
 #app {
   display: grid;
   justify-items: center;
@@ -99,7 +105,7 @@ button {
   border: 0;
   border-radius: 50%;
 
-  color: var(--primary--color);
+  color: var(--second--color);
   font-size: 6.4rem;
 
   cursor: pointer;
@@ -130,18 +136,21 @@ footer {
   bottom: 0;
   width: 100%;
 
-  color: #fff;
   text-align: center;
   line-height: 8rem;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
 }
 
 footer a {
   text-decoration: none;
   transition: 0.2s;
-  color: var(--primary--color);
+  color: #fff;
 }
 
-footer a:hover {
-  color: #7062f4;
+footer a strong {
+  color: var(--second--color);
+}
+
+footer a strong:hover {
+  color: #f66b6b;
 }
