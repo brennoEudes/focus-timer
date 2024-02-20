@@ -155,3 +155,8 @@ footer a strong {
 footer a strong:hover {
   color: #f66b6b;
 }
+
+footer img {
+  width: 1.2rem;
+  height: auto;
+}
